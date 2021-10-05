@@ -12,6 +12,8 @@ body {
   background: #F2F4F5;
   color: #1E1E1F;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 #root {

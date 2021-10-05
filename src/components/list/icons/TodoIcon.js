@@ -1,7 +1,7 @@
 import React from 'react';
-import './../styles/TodoIcon.css'
-import { ReactComponent as CheckSVG } from './../assets/check.svg'
-import { ReactComponent as DeleteSVG } from './../assets/close.svg'
+import '../../../assets/styles/TodoIcon.css'
+import { ReactComponent as CheckSVG } from '../../../assets/img/check.svg'
+import { ReactComponent as DeleteSVG } from '../../../assets/img/close.svg'
 
 const iconTypes = {
   'check': color => (
@@ -12,11 +12,11 @@ const iconTypes = {
   ),
 }
 
-const TodoIcon = ({ type, color = 'gray', onclick }) => {
+const TodoIcon = ({ type, color = 'gray', onClick }) => {
   return (
     <span
       className={`Icon-container Icon-container--${type}`}
-      onClick={onclick}>
+      onClick={onClick}>
       {iconTypes[type](color)}
     </span>
   )
