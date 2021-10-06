@@ -1,20 +1,24 @@
 import React from 'react';
 import '../../assets/styles/TodoSearch.css'
 
-const TodoSearch = ({ searchValue, setSearchValue }) => {
+const TodoSearch = ({ loading, totalTodos, searchValue, setSearchValue }) => {
 
   const onSearchValueChange = (event) => {
-    console.log(event.target.value);
     setSearchValue(event.target.value);
   };
 
   return (
-    <input
-      className="TodoSearch"
-      placeholder="Cebolla"
-      value={searchValue}
-      onChange={onSearchValueChange}
-    />
+    <React.Fragment>
+      {(totalTodos > 0) ?
+        <input
+          className="TodoSearch"
+          placeholder="Busca tus TODOs"
+          value={searchValue}
+          onChange={onSearchValueChange}
+        /> :
+        loading ? <h2>Organiza tus tareas con TODO-Machine</h2> : <h2>Aún no tienes TODOs...</h2>
+      }
+    </React.Fragment>
   );
 }
 

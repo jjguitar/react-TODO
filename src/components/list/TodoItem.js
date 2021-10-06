@@ -14,7 +14,7 @@ const TodoItem = (props) => {
       <p
         className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}
       >
-       {props.text}
+        {props.text}
       </p>
       <DeleteIcon
         onDelete={props.onDelete}
