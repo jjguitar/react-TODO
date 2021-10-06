@@ -1,13 +1,25 @@
 :root {
   --primary-color: #383F50;
+  --card-background: #61DAFA;
+  --slider: #B2B7BB;
   --black: #23262C;
+  --background: #23262C;
   --white: #F4F6FA;
   --light-gray: #B2B7BB;
   --for-black: #2E3239;
   --pure-white: #FFFFFF;
+  --warning-color: #FFC453;
   --sm: 12px;
   --md: 16px;
   --lg: 24px;
+}
+
+[data-theme=light] {
+  --background: #F4F6FA;
+  --card-background: #383F50;
+  --white: #383F50;
+  --slider: #63687e;
+  --title: #1e202a;
 }
 
 * {
@@ -22,7 +34,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--black);
+  background: var(--background);
   color: var(--white);
   font-family: 'Poppins', sans-serif;
   max-width: 720px;

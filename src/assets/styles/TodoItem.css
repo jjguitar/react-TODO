@@ -1,5 +1,6 @@
 .TodoItem {
   background-color: var(--primary-color);
+  color: #F4F6FA;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -18,7 +19,7 @@
   width:100%;
   padding-left: 15px;
   text-align:left;
-
+  word-break: break-all;
 }
 .TodoItem-p--complete {
   text-decoration: line-through;

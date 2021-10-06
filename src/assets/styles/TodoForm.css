@@ -15,7 +15,7 @@ label {
   font-size: var(--lg);
   font-weight: bold;
   color: var(--black);
-  margin-bottom: 26px;
+  margin-bottom: 15px;
 }
 
 textarea {
@@ -25,6 +25,7 @@ textarea {
   box-shadow: 0px 5px 50px rgba(217, 221, 231, 0.25);
   color: var(--black);
   font-size: var(--md);
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   padding: 12px;
   height: 96px;
@@ -70,4 +71,13 @@ textarea:focus {
   border-radius:10px;
   color: var(--primary-color);
   background: var(--white);
+}
+
+.Warning-text {
+  border-radius:10px;
+  margin-bottom:5px;
+  font-weight: bold;
+  text-align: center;
+  background: var(--warning-color);
+  color: var(--primary-color);
 }

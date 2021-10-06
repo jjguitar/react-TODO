@@ -43,7 +43,7 @@ function App() {
           completedTodos={completedTodos}
         />
       </TodoHeader>
-      
+
       <TodoSearch
         loading={loading}
         totalTodos={totalTodos}
@@ -60,14 +60,14 @@ function App() {
         {searchedTodos.length > 0 ?
           searchedTodos.map( todo => (
           <TodoItem
-            key={todo.text}
+            key={todo.id}
             text={todo.text}
             completed={todo.completed}
-            onComplete={() => toggleTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
+            onComplete={() => toggleTodo(todo.id)}
+            onDelete={() => deleteTodo(todo.id)}
           />
           )) :
-          !(totalTodos > 0) ? null : <h2>TODOs no encontrados</h2>
+          !(totalTodos > 0) ? null : <h2 className="NotFoundMessage">Tareas no encontradas</h2>
         }
       </TodoList>
 

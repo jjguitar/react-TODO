@@ -25,9 +25,9 @@ const TodoForm = ({ addTodo, setOpenModal }) => {
   }
   return (
     <form onSubmit={onSubmit}>
-      <label>Escribe tu nuevo To Do</label>
+      <label>Escribe tu nueva tarea</label>
       {warningValue && (
-        <label>No has escrito nada!</label>
+        <p className="Warning-text">Para continuar, por favor escribe una tarea.</p>
       )}
       <textarea
         value={newTodoValue}

@@ -15,3 +15,11 @@
 .TodoSearch:focus {
   outline-color: var(--light-gray);
 }
+
+.TodoSearch-loading {
+  margin-bottom: 50px;
+}
+
+.NotFoundMessage {
+  padding: 30px;
+}

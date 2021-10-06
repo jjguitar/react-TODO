@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocalStorage } from './useLocalStorage.js'
+import { idGenerator } from '../utils/KeyGenerator.js'
 
 const useTodos = () => {
   const {
@@ -27,27 +28,28 @@ const useTodos = () => {
     })
   }
 
-  const findIndex = (text) => {
-    return todos.findIndex(todo => todo.text === text)
+  const findIndex = (id) => {
+    return todos.findIndex(todo => todo.id === id)
   }
 
-  const toggleTodo = (text) => {
+  const toggleTodo = (id) => {
 
     const newTodos = [...todos]
-    newTodos[findIndex(text)].completed = !newTodos[findIndex(text)].completed
+    newTodos[findIndex(id)].completed = !newTodos[findIndex(id)].completed
     saveTodos(newTodos)
   }
 
-  const deleteTodo = (text) => {
+  const deleteTodo = (id) => {
 
     const newTodos = [...todos]
-    newTodos.splice(findIndex(text), 1)
+    newTodos.splice(findIndex(id), 1)
     saveTodos(newTodos)
   }
 
   const addTodo = (text) => {
     const newTodos = [...todos]
     newTodos.push({
+      id: idGenerator(),
       text,
       completed: false,
     })
