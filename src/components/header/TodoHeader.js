@@ -4,7 +4,11 @@ import '../../assets/styles/TodoHeader.css'
 const TodoHeader = ({ children }) => {
   return(
     <header>
-      {children}
+      <div className="avatar"></div>
+      <div className="InfoHeader">
+        <h1>TODO-Machine</h1>
+        {children}
+      </div>
     </header>
   )
 }

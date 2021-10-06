@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../assets/styles/TodoCounter.css'
 
 const TodoCounter = ({ completedTodos, totalTodos}) => {
 
@@ -8,11 +7,10 @@ const TodoCounter = ({ completedTodos, totalTodos}) => {
   }
   return (
     <React.Fragment>
-      <h1>TODO-Machine</h1>
       {!thereTodos() ?
         <h2>Has completado {completedTodos} de {totalTodos} TODOs</h2>
         :
-        null}
+        <h2>Agrega lo que necesites</h2>}
     </React.Fragment>
   )
 }

@@ -42,13 +42,14 @@ function App() {
           totalTodos={totalTodos}
           completedTodos={completedTodos}
         />
-        <TodoSearch
-          loading={loading}
-          totalTodos={totalTodos}
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-        />
       </TodoHeader>
+      
+      <TodoSearch
+        loading={loading}
+        totalTodos={totalTodos}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
 
 
       <TodoList>

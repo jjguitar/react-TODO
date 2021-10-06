@@ -32,6 +32,7 @@ const TodoForm = ({ addTodo, setOpenModal }) => {
       <textarea
         value={newTodoValue}
         onChange={onChange}
+        autoFocus
         placeholder='Escribe una nueva tarea'
       />
       <div className="TodoForm-buttonContainer">

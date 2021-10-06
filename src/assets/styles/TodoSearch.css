@@ -1,26 +1,17 @@
 .TodoSearch {
-  background: #F9FBFC;
-  border-radius: 10px;
-  border: 2px solid #37383b;
-  margin: 0 24px;
-  height: 64px;
-  width: calc(100% - 62px);
-  max-width: 500px;
-  font-size: 24px;
-  text-align: center;
-  font-family: 'Montserrat';
+  background: var(--white);
+  padding-left: 12px;
+  margin: 0 30px;
+  height: 50px;
+  width: calc(100% - 60px);
+  font-size: var(--md);
+  text-align: left;
   font-weight: 400;
-  color: #1E1E1F;
-  box-shadow: 0px 5px 50px rgba(95, 159, 175, 0.25);
+  color: var(--light-gray);
+  border: none;
   border-radius: 10px;
-}
-
-.TodoSearch::placeholder {
-  color: #A5A5A5;
-  font-family: 'Montserrat';
-  font-weight: 400;
 }
 
 .TodoSearch:focus {
-  outline-color: #61DAFA;
+  outline-color: var(--light-gray);
 }
