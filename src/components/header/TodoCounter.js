@@ -10,7 +10,7 @@ const TodoCounter = ({ completedTodos, totalTodos}) => {
       {!thereTodos() ?
         <h2>Has completado {completedTodos} de {totalTodos} tareas</h2>
         :
-        <h2>Agrega lo que necesites</h2>}
+        <h2>Agrega lo que necesites, organiza tus tareas</h2>}
     </React.Fragment>
   )
 }

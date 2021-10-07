@@ -22,6 +22,7 @@ header {
   font-weight: bold;
   color: var(--white);
   margin: 0;
+  text-align: center;
 }
 
 .InfoHeader h2 {
@@ -46,6 +47,7 @@ header {
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 0;
 }
 
 .theme-switch input {
@@ -113,5 +115,25 @@ input:checked + .slider:before {
 @media (max-width: 425px) {
   .avatar {
     display: none;
+  }
+  .InfoHeader h1{
+    text-align: left;
+  }
+  .TodoSearch-loading {
+    font-size: var(--md);
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 250px) {
+  header {
+    flex-direction: column;
+  }
+  .InfoHeader {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .InfoHeader h1{
+    text-align: center;
   }
 }

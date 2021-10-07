@@ -16,7 +16,7 @@ const TodoHeader = ({ children }) => {
         <img src={avatar} alt='avatar'/>
       </div>
       <div className="InfoHeader">
-        <h1>TODO-Machine</h1>
+        <h1>TODO Machine</h1>
         {children}
       </div>
       <div className="change">

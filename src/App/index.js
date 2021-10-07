@@ -52,13 +52,30 @@ function App() {
       />
 
 
-      <TodoList>
-        {error && <TodosError error={error} />}
-        {loading && <TodosLoading />}
-        {!loading && !(totalTodos > 0) ? <EmptyTodos /> : null}
+      <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        totalTodos={totalTodos}
+        searchText={searchValue}
 
-        {searchedTodos.length > 0 ?
-          searchedTodos.map( todo => (
+        onEmptySearchResults={(searchText) => (
+          <p className="NotFoundMessage">No hay resultado para {searchText} </p>
+        )}
+        // render={todo => (
+        //   <TodoItem
+        //     key={todo.id}
+        //     text={todo.text}
+        //     completed={todo.completed}
+        //     onComplete={() => toggleTodo(todo.id)}
+        //     onDelete={() => deleteTodo(todo.id)}
+        //   />
+        // )}
+      >
+        {todo => (
           <TodoItem
             key={todo.id}
             text={todo.text}
@@ -66,9 +83,7 @@ function App() {
             onComplete={() => toggleTodo(todo.id)}
             onDelete={() => deleteTodo(todo.id)}
           />
-          )) :
-          !(totalTodos > 0) ? null : <h2 className="NotFoundMessage">Tareas no encontradas</h2>
-        }
+        )}
       </TodoList>
 
       {openModal && (
