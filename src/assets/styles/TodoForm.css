@@ -80,3 +80,16 @@ textarea:focus {
   background: var(--warning-color);
   color: var(--primary-color);
 }
+
+@media (max-width: 290px) {
+  .TodoForm-buttonContainer {
+    flex-direction: column-reverse;
+  }
+
+  .TodoForm-button-add {
+    margin-bottom: 10px;
+  }
+  .TodoForm-button-add, .TodoForm-button-cancel {
+    width: 100%;
+  }
+}
