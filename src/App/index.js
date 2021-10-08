@@ -12,12 +12,8 @@ import { TodoForm } from '../components/form/TodoForm';
 import { TodosError } from '../components/UXInfo/TodosError'
 import { TodosLoading } from '../components/UXInfo/TodosLoading'
 import { EmptyTodos } from '../components/list/EmptyTodos'
+import { ChangeAlertWithStorageListener } from '../components/changeAlert/ChangeAlert.js'
 
-// const defaultTodos = [
-//   { text: 'Cortar cebolla', completed: false },
-//   { text: 'Tomar cebolla', completed: false },
-//   { text: 'Lorar con la cebolla', completed: false },
-// ]
 
 function App() {
   const {
@@ -98,6 +94,8 @@ function App() {
       <CreateTodoButton
         setOpenModal={setOpenModal}
       />
+
+      <ChangeAlertWithStorageListener />
     </React.Fragment>
   );
 }
